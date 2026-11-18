@@ -27,12 +27,12 @@
     "name": "花咔漫画",
     "fileName": "https://cdn.jsdelivr.net/gh/Nakami003/Fujyoshi-VeneraNext@main/huaka.js",
     "key": "huaka",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   {
     "name": "香香腐宅",
     "fileName": "https://cdn.jsdelivr.net/gh/Nakami003/Fujyoshi-VeneraNext@main/boylove.js",
     "key": "boylove",
-    "version": "1.0.0"
+    "version": "1.0.1"
   }
 ]
