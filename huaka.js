@@ -2,7 +2,7 @@
 class Huaka extends ComicSource {
     name = "花咔漫画";
     key = "huaka";
-    version = "1.0.0";
+    version = "1.0.1";
     minAppVersion = "1.4.0";
     url = "https://raw.githubusercontent.com/Nakami003/Fujyoshi-VeneraNext/main/huaka.js";
     base = "https://app.huakacomic.com";
@@ -42,6 +42,36 @@ class Huaka extends ComicSource {
             },
         },
     };
+
+    explore = [{
+        title: "花咔漫画",
+        type: "multiPageComicList",
+        load: async page => {
+            if (page > 1) return { comics: [], maxPage: 1 };
+            const url = this.home + "/latest";
+            const document = new HtmlDocument(await this.get(url, this.home));
+            const comics = [];
+            const seen = new Set();
+            try {
+                for (const link of document.querySelectorAll('a[href*="/comics/"]')) {
+                    const match = /^(?:https:\/\/app\.huakacomic\.com)?\/zh-CN\/comics\/([^/?#]+)[\/?#]?$/.exec(
+                        link.attributes.href.split(/[?#]/)[0].replace(/\/$/, "")
+                    );
+                    if (!match || seen.has(match[1])) continue;
+                    const img = link.querySelector("img")?.attributes || {};
+                    const title = (link.querySelector("h2, h3, h4, h5")?.text || img.alt || link.attributes.title || link.text || "").trim();
+                    if (!title) continue;
+                    seen.add(match[1]);
+                    comics.push(new Comic({ id: decodeURIComponent(match[1]), title,
+                        cover: this.cover(img["data-src"] || img.src) }));
+                }
+            } finally {
+                document.dispose();
+            }
+            if (!comics.length) throw new Error("花咔最近更新页没有返回可识别的漫画。");
+            return { comics, maxPage: 1 };
+        },
+    }];
 
     search = {
         optionList: [
