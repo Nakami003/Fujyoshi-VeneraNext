@@ -3,7 +3,7 @@
 class BoyLove extends ComicSource {
     name = "香香腐宅";
     key = "boylove";
-    version = "1.0.0";
+    version = "1.0.1";
     minAppVersion = "1.4.0";
     url = "https://raw.githubusercontent.com/Nakami003/Fujyoshi-VeneraNext/main/boylove.js";
     base = "https://boylove.cc";
@@ -51,16 +51,9 @@ class BoyLove extends ComicSource {
     };
 
     explore = [{
-        title: "热门",
+        title: "香香腐宅",
         type: "multiPageComicList",
         load: page => this.list("/home/api/getpage/tp/1-topestmh-" + (page - 1), page),
-    }, {
-        title: "最近更新",
-        type: "multiPageComicList",
-        load: async page => {
-            const list = await this.api("/home/Api/getDailyUpdate.html?widx=4&page=" + (page - 1) + "&limit=10");
-            return { comics: list.map(entry => this.remember(entry)), maxPage: page + (list.length >= 10 ? 1 : 0) };
-        },
     }];
 
     comic = {
