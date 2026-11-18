@@ -22,5 +22,17 @@
     "fileName": "../../venera-app/venera-configs@main/picacg.js",
     "key": "picacg",
     "version": "1.0.6"
+  },
+  {
+    "name": "花咔漫画",
+    "fileName": "huaka.js",
+    "key": "huaka",
+    "version": "1.0.0"
+  },
+  {
+    "name": "香香腐宅",
+    "fileName": "boylove.js",
+    "key": "boylove",
+    "version": "1.0.0"
   }
 ]
