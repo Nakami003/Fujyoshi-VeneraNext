@@ -1,37 +1,37 @@
 [
   {
     "name": "漫蛙吧",
-    "fileName": "../../handahao666-boop/venera_comic_source@main/manwaba_fixed_v113.js",
+    "fileName": "https://cdn.jsdelivr.net/gh/handahao666-boop/venera_comic_source@main/manwaba_fixed_v113.js",
     "key": "manwaba",
     "version": "1.1.3"
   },
   {
     "name": "再漫画",
-    "fileName": "../../handahao666-boop/venera_comic_source@main/zaimanhua.js",
+    "fileName": "https://cdn.jsdelivr.net/gh/handahao666-boop/venera_comic_source@main/zaimanhua.js",
     "key": "zaimanhua",
     "version": "1.0.2"
   },
   {
     "name": "comick",
-    "fileName": "../../LX7kM9/venera-configs@main/comick.js",
+    "fileName": "https://cdn.jsdelivr.net/gh/LX7kM9/venera-configs@main/comick.js",
     "key": "comick",
     "version": "1.3.0"
   },
   {
     "name": "Picacg",
-    "fileName": "../../venera-app/venera-configs@main/picacg.js",
+    "fileName": "https://cdn.jsdelivr.net/gh/venera-app/venera-configs@main/picacg.js",
     "key": "picacg",
     "version": "1.0.6"
   },
   {
     "name": "花咔漫画",
-    "fileName": "huaka.js",
+    "fileName": "https://raw.githubusercontent.com/Nakami003/Fujyoshi-VeneraNext/main/huaka.js",
     "key": "huaka",
     "version": "1.0.0"
   },
   {
     "name": "香香腐宅",
-    "fileName": "boylove.js",
+    "fileName": "https://raw.githubusercontent.com/Nakami003/Fujyoshi-VeneraNext/main/boylove.js",
     "key": "boylove",
     "version": "1.0.0"
   }
