@@ -22,11 +22,5 @@
     "fileName": "../../venera-app/venera-configs@main/picacg.js",
     "key": "picacg",
     "version": "1.0.6"
-  },
-  {
-    "name": "漫蛙",
-    "fileName": "../../Y-Ymeow/venera-configs@main/manwa.js",
-    "key": "manwa",
-    "version": "1.1.8"
   }
 ]
